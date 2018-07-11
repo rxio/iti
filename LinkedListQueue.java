@@ -49,6 +49,9 @@ public class LinkedListQueue implements Queue {
 			tail = newElement;
 		}
 
+		newElement.setData(null);
+		newElement.setNext(null);
+
 	}
 
 	public Job dequeue() {
@@ -64,6 +67,9 @@ public class LinkedListQueue implements Queue {
 		if ( head == null ) {
 			tail = null;
 		}
+
+		toBeRemoved.setData(null);
+		toBeRemoved.setNext(null);
 
 		return savedData;
 		
