@@ -1,7 +1,7 @@
-public class LinkedListQueue<E> implements Queue<E> {
+public class LinkedListQueue implements Queue {
 
-	private Node<E> head;
-	private Node<E> tail;
+	private Node head;
+	private Node tail;
 
 	public LinkedListQueue() {
 
@@ -23,9 +23,9 @@ public class LinkedListQueue<E> implements Queue<E> {
 
 	}
 
-	public void enqueue( E obj ) {
+	public void enqueue( Job element ) {
 		
-		Node<E> newElement = new Node<E>(obj);
+		Node newElement = new Node(element);
 
 		if ( isEmpty() ) {	
 			tail = newElement;
@@ -37,9 +37,9 @@ public class LinkedListQueue<E> implements Queue<E> {
 
 	}
 
-	public void enqueue( E obj, Node<E> selectedNode ) {
+	public void enqueue( Job element, Node selectedNode ) {
 		
-		Node<E> newElement = new Node<E>( obj, selectedNode );
+		Node newElement = new Node( element, selectedNode );
 
 		if ( isEmpty() ) {	
 			tail = newElement;
@@ -51,14 +51,14 @@ public class LinkedListQueue<E> implements Queue<E> {
 
 	}
 
-	public E dequeue() {
+	public Job dequeue() {
 
 		if ( isEmpty() ) {
 			return null;
 		}
 
-		Node<E> toBeRemoved = head;
-		E savedData = toBeRemoved.getData();
+		Node toBeRemoved = head;
+		Job savedData = toBeRemoved.getData();
 		head = head.getNext();
 
 		if ( head == null ) {

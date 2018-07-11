@@ -1,30 +1,30 @@
 public class Node {
-	private T data;
-	private Node<T> next;
+	private Job data;
+	private Node next;
 
-	public Node( T data ) {
+	public Node( Job data ) {
 		this.data = data;
 		this.next = null;
 	}
 
-	public Node( T data, Node<T> next ) {
+	public Node( Job data, Node next ) {
 		this.data = data;
 		this.next = next;
 	}
 
-	public void setData( T data ) {
+	public void setData( Job data ) {
 		this.data = data;
 	}
 
-	public void setNext( Node<T> next ) {
+	public void setNext( Node next ) {
 		this.next = next;
 	}
 
-	public T getData() {
+	public Job getData() {
 		return data;
 	}
 
-	public Node<T> getNext() {
+	public Node getNext() {
 		return next;
 	}	
 }
