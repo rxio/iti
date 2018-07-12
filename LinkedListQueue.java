@@ -1,8 +1,14 @@
 public class LinkedListQueue implements Queue {
 
+	/**
+	 * Instance variables
+	 */
 	private Node head;
 	private Node tail;
-
+	
+    /**
+     * The constructor initializes the head and tail instance variables.
+     */
 	public LinkedListQueue() {
 
 		head = null;
@@ -10,19 +16,20 @@ public class LinkedListQueue implements Queue {
 
 	}
 
+    /**
+     * Checks to see if the queue contains elements. 
+     * It returns true if the queue is empty and false otherwise.
+     */
 	public boolean isEmpty() {
 
 		return head == null;
 
 	}
 
-	public void clear() {
-
-		head = null;
-		tail = null;
-
-	}
-
+    /**
+     * Adds an element to the rear of the queue.
+     * This enqueue() method is called only if one argument is given.
+     */
 	public void enqueue( Job element ) {
 		
 		Node newElement = new Node(element);
@@ -37,6 +44,10 @@ public class LinkedListQueue implements Queue {
 
 	}
 
+    /**
+     * Adds an element to the rear of the queue.
+     * This enqueue() method is called when two arguments are given.
+     */
 	public void enqueue( Job element, Node selectedNode ) {
 		
 		Node newElement = new Node( element, selectedNode );
@@ -54,6 +65,9 @@ public class LinkedListQueue implements Queue {
 
 	}
 
+    /**
+     * Removes an element from the front of the queue.
+     */	
 	public Job dequeue() {
 
 		if ( isEmpty() ) {
@@ -73,6 +87,16 @@ public class LinkedListQueue implements Queue {
 
 		return savedData;
 		
+	}
+
+    /**
+     * Removes all the elements from the queue.
+     */
+	public void clear() {
+
+		head = null;
+		tail = null;
+
 	}
 
 }

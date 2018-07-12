@@ -1,7 +1,14 @@
 public class Node {
+
+	/**
+	 * Instance variables
+	 */
 	private Job data;
 	private Node next;
 
+	/**
+	 * Constructors
+	 */
 	public Node( Job data ) {
 		this.data = data;
 		this.next = null;
@@ -12,6 +19,9 @@ public class Node {
 		this.next = next;
 	}
 
+	/**
+	 * Instance getter and setter methods
+	 */
 	public void setData( Job data ) {
 		this.data = data;
 	}
