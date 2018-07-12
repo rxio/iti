@@ -1,0 +1,39 @@
+1. What are differences in how the jobs are managed between FCFS and FPPS?
+	FCFS manages jobs by carrying them out in the 
+	order they come in.  New jobs are put at the end 
+	of the queue.  Then the scheduler will perform 
+	the job at the front of the queue before moving 
+	onto the next job.
+
+	FPPS manages jobs by assigning each job a 
+	priority.  Jobs are put into a queue, and the 
+	highest priority jobs are put at the front of the 
+	queue and carried out first, before the lower 
+	priority jobs are carried out.  Each time a new 
+	job is added, it will be sorted into the queue 
+	according to its priority value.
+
+2. What are the advantages of FCFS over FPPS and vice versa?
+	The advantage that FCFS has over FPPS is that 
+	they can be faster and less complex.  So for 
+	certain schedulers that have jobs where priority 
+	doesn't matter, it is a better implmentation for 
+	that.
+
+	The advantage of FPPS is that jobs of high 
+	priority, which are more important, will be 
+	carried out before low priority jobs are carried 
+	out.  So for schedulers where priority matters, 
+	FPPS is the better implmentation.
+
+3. What potential problems do you see happening if you were using an operating system with an FCFS scheduler?
+	If the operating system has a lot of high 
+	priority jobs, there will be reduced performance, 
+	since lower priority jobs may be performed 
+	before the high priority ones.
+
+4. What potential problems do you see happening if you were using an operating system with an FPPS scheduler?
+	If the priority of the jobs isn't important for 
+	this operating system, then it would also suffer 
+	from reduced performance because of the 
+	complexity of how the FPPS is implemented.
